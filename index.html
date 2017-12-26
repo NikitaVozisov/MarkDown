@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdowns</title>   
+	<!--<script src="https://127.0.0.1:3000/index.js"></script>-->
+</head>
+<body>
+                              <!-- Text Area -->
+    <div id= "editor" style="height: 30%;
+		  font-family:  Arial, sans-serif;">
+			<textarea :value="input" id="textplace" style="display: inline-block; width: 50%; height: 600px; vertical-align: top; box-sizing: border-box; border: none; border-right: 5px solid #ccc; resize: none; outline: none; background-color: #FFFFFF; font-size: 16px; font-family: 'Monaco', courier, monospace;" @input="update">
+			</textarea>
+			<div id = "MarkDown" v-html="compiledMarkdown" style="display: inline-block; width: 49%; height: 100%; vertical-align: top; box-sizing: border-box; resize: none; word-wrap: break-word;">
+			</div>
+		</div>
+		<div id="someid" style="margin-left: auto; margin-right: auto;">
+                        
+	                    	<!-- File Selector -->
+	   <input style="margin-left: 10px; margin-right: 10px; width: 200px" v-model="loadfn" placeholder="Filename">
+		<!--<select id="selector" style="margin-left: auto; margin-right: 10px; width: 200px" v-model="loadfn" >
+		  	<option disabled value="">Choose the file</option>
+		  	<option v-for="markdown in markdowns" v-bind:value="loadfn"> {{markdown}} </option> 
+		</select>-->
+                            <!-- Open File button -->
+		<button id="OpenButton" v-on:click="loadfile()">Open file</button>
+                            <!-- File name input -->
+		<input style="margin-left: 10px; margin-right: 10px; width: 200px" v-model="savefn" placeholder="Filename">
+                            <!-- Save File button -->
+		<button id="SaveButton" v-on:click="savefile()">Save file</button>
+		</div>
+    
+    
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+	<script src="https://unpkg.com/lodash@4.16.0"></script>	
+	<script src="https://unpkg.com/vue"></script>
+	<script src="http://w99921lp.beget.tech/frontend.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>	
+		
+</body>
+</html>

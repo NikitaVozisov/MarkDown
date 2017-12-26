@@ -1,0 +1,24 @@
+{
+  "name": "markdowns",
+  "version": "1.0.0",
+  "description": "my_markdown_project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "favicon": "0.0.2",
+    "logger": "0.0.1",
+    "mongoose": "^4.13.6",
+    "router": "^1.3.2",
+    "vue": "^2.5.9",
+    "vue-resource": "^1.3.4",
+    "vue-server-renderer": "^2.5.9"
+  }
+}
